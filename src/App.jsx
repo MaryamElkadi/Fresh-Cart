@@ -18,6 +18,7 @@ import CategoryProducts from './pages/CategoryProducts/CategoryProducts'
 import Brands from './pages/Brands/Brands'
 import BrandProducts from './pages/BrandProducts/BrandProducts'
 import Favorites from './pages/Favorites/Favorites'
+
 function App() {
   const routes = createBrowserRouter([
     {
@@ -32,11 +33,10 @@ function App() {
         { path: 'cart', element: <Cart /> },
         { path: 'allorders', element: <Orders /> },
         { path: 'checkout', element: <Checkout /> },
-        {path: 'brands',element: <Brands />},
-        {path:'favorites', element: <Favorites/>},
-        {path: 'brand/:brandId',element: <BrandProducts />},
+        { path: 'brands', element: <Brands /> },
+        { path: 'favorites', element: <Favorites/> },
+        { path: 'brand/:brandId', element: <BrandProducts /> },
         { path: '*', element: <NotFound /> },
-      
       ]
     },
     {
@@ -50,7 +50,9 @@ function App() {
         { path: 'signup', element: <Register /> },
       ]
     }
-  ])
+  ], {
+    basename: "/Fresh-Cart"  
+  });
 
   return routes;
 }

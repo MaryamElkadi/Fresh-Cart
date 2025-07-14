@@ -20,7 +20,10 @@ createRoot(document.getElementById('root')).render(
   <QueryClientProvider client={myClient}>
     <UserProvider>
       <CartProvider>
-        <RouterProvider router={router} />
+        <RouterProvider 
+          router={router} 
+          basename="/Fresh-Cart" 
+        />
         <ReactQueryDevtools />
         <Toaster />
       </CartProvider>
